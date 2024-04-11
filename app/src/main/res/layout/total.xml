@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- Add your other UI components here as needed -->
+
+    <!-- DatePicker to allow the user to select a date -->
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Button to trigger the calculation of the total for the selected date -->
+    <Button
+        android:id="@+id/totalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Calculate Total" />
+
+    <!-- TextView to display the total amount for the selected date -->
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/totalButton"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/datePicker"
+        android:layout_marginTop="202dp"
+        android:layout_marginLeft="150dp"
+        android:text="Logout" />
+
+</RelativeLayout>

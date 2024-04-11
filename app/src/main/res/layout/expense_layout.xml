@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <!-- Display Amount -->
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#FF3131"
+                android:hint="Amount" />
+
+            <!-- Horizontal Line 1 -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/black" />
+
+            <!-- Display Category -->
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#FF3131"
+                android:hint="Category" />
+
+            <!-- Horizontal Line 2 -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/black" />
+
+            <!-- Display ProductName -->
+            <TextView
+                android:id="@+id/productname"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#FF3131"
+                android:hint="Product Name" />
+
+            <!-- Horizontal Line 2 -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/black" />
+
+            <!-- Display Date -->
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#FF3131"
+                android:textAlignment="center"
+                android:hint="Date" />
+
+        </LinearLayout>
+
+        <!-- Dark line at the end -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/black" />
+
+    </LinearLayout>
+
+</HorizontalScrollView>

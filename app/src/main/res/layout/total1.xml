@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_reports.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ReportsActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:id="@+id/back"
+            android:layout_height="40dp"
+            android:layout_marginLeft="-170dp"
+            android:src="@drawable/back1" />
+
+        <Button
+            android:id="@+id/selectDateButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFA500"
+            android:text="Select Date" />
+
+        <TextView
+            android:id="@+id/selectMonthButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selectDateButton"
+            android:layout_marginTop="0dp"/>
+
+        <TextView
+            android:id="@+id/totalExpensesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selectMonthButton"
+            android:text="Total Expenses: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_marginTop="0dp"/>
+
+
+        <!-- Add this to total1.xml -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rectangle_n"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/selectDateButton" />
+
+
+        <!-- Clickable link -->
+        <Button
+            android:id="@+id/callDeveloperLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If facing any issue, CALL Developer"
+            android:layout_below="@id/totalExpensesTextView"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:clickable="true"
+            android:onClick="callDeveloper" />
+
+    </LinearLayout>
+
+</RelativeLayout>

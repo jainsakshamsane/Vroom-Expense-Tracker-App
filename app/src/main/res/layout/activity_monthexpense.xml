@@ -1,0 +1,72 @@
+<!-- activity_monthexpense.xml -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".MonthExpense">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:id="@+id/back"
+            android:layout_height="40dp"
+            android:src="@drawable/back1" />
+
+        <DatePicker
+            android:id="@+id/fromDatePicker"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+
+        <DatePicker
+            android:id="@+id/toDatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SmallDatePicker"
+            android:layout_below="@id/fromDatePicker"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toDatePicker"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FFA500"
+            android:layout_centerHorizontal="true"
+            android:text="Calculate Expenses"
+            android:onClick="calculateExpenses"/>
+
+        <TextView
+            android:id="@+id/totalExpensesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calculateButton"
+            android:text="Total Expenses: "
+            android:padding="16dp"
+            android:textSize="25dp"
+            android:background="@drawable/rectangle_n"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewExpenses"
+            android:layout_width="320dp"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/rectangle_n"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/totalExpensesTextView"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+</ScrollView>

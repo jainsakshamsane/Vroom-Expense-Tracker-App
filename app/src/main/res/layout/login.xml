@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="DuplicateIds,InvalidId">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/layout1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/login_image" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="380dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/layout1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/email3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:hint="Enter Email" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="380dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/layout2"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/password3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:hint="Enter Password"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout4"
+            android:layout_width="380dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/layout3"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/login1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="130dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout5"
+            android:layout_width="380dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/layout4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/register1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New User? Sign In"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="90dp"/>
+
+        </LinearLayout>
+
+        <!-- Add this LinearLayout for fingerprint authentication -->
+        <LinearLayout
+            android:id="@+id/fingerprintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/layout5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Optional: Add a fingerprint icon -->
+            <ImageView
+                android:id="@+id/fingerprintIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/fingerprint_icon"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <!-- Add the fingerprint prompt TextView -->
+            <Button
+                android:id="@+id/fingerprintbutton"
+                android:layout_width="300dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:text="Use Fingerprint to Login" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

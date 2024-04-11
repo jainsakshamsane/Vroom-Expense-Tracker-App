@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:ignore="DuplicateIds,InvalidId">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/expense3" />
+
+            <EditText
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:hint="Category" />
+
+            <EditText
+                android:id="@+id/productname"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:hint="Product Name" />
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:ems="10"
+                android:inputType="number"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:hint="Amount (In Rupees)"/>
+
+            <!-- Replace DatePicker with EditText for manual date input -->
+            <!-- Replace the EditText for date input with a Button -->
+            <Button
+                android:id="@+id/chooseDateButton"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:text="Choose Date"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+            <Button
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:text="Add your Expense"
+                android:layout_marginTop="80dp"
+                android:id="@+id/addexpense"
+                android:backgroundTint="#E35335"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:textAlignment="center"
+                android:textSize="30dp" />
+
+            <Button
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:text="View all Expenses"
+                android:id="@+id/viewexpense"
+                android:backgroundTint="#E30B5C"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

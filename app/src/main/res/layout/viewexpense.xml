@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:layout_height="match_parent"
+    tools:ignore="DuplicateIds,InvalidId">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:id="@+id/layout123"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:id="@+id/back"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back1" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:src="@drawable/expenses001" />
+
+            <Button
+                android:layout_width="130dp"
+                android:id="@+id/logout"
+                android:layout_marginLeft="10dp"
+                android:layout_height="50dp"
+                android:text="LOGOUT"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FF0000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/layout1234"
+            android:layout_below="@+id/layout123" >
+
+            <!-- Heading for Amount -->
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Amount (in Rupees)"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <!-- Heading for Category -->
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Category"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Product Name"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <!-- Heading for Date -->
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Date (DD/MM/YYYY)"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Wrap the RecyclerView in HorizontalScrollView -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout1234"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/hview"
+            app:layout_constraintBottom_toTopOf="@id/layout2">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="520dp"/>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/hview"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/calctotal"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:text="Calculate Total for Day"
+                android:backgroundTint="#FFA500"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/calctotalmonth"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:text="Calculate Total for Month"
+                android:backgroundTint="#FFA500"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
